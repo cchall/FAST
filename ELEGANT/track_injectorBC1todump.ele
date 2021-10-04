@@ -57,7 +57,7 @@
 &end
 
 &save_lattice 
-        filename = injectortodump.saved_lattice 
+        filename = injectortodump.lte 
 &end
 
 &track
