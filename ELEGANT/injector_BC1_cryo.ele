@@ -10,7 +10,7 @@
 	use_beamline="INJ_BC1_ICM"
 	default_order = 1
         parameters = injector_preBC1.param,
-	p_central= "{sddsanalyzebeam daniel_fort1.sdds -pipe=out | sdds2stream -pipe -column=pAverage}"
+	p_central= "{sddsanalyzebeam daniel_fort50_8m.sdds -pipe=out | sdds2stream -pipe -column=pAverage}"
 !---old--distribution--rb2cav-033419.0820.001.sdds	
 &end
 
@@ -23,10 +23,10 @@
 &twiss_output
         matched=0
   	concat_order = 1,        ! for speed
-        beta_x  = "{sddsanalyzebeam daniel_fort1.sdds -pipe=out | sdds2stream -pipe -column=betax}",
-        beta_y  = "{sddsanalyzebeam daniel_fort1.sdds -pipe=out | sdds2stream -pipe -column=betay}",
-        alpha_x = "{sddsanalyzebeam daniel_fort1.sdds -pipe=out | sdds2stream -pipe -column=alphax}",
-        alpha_y = "{sddsanalyzebeam daniel_fort1.sdds -pipe=out | sdds2stream -pipe -column=alphay}",
+        beta_x  = "{sddsanalyzebeam daniel_fort50_8m.sdds -pipe=out | sdds2stream -pipe -column=betax}",
+        beta_y  = "{sddsanalyzebeam daniel_fort50_8m.sdds -pipe=out | sdds2stream -pipe -column=betay}",
+        alpha_x = "{sddsanalyzebeam daniel_fort50_8m.sdds -pipe=out | sdds2stream -pipe -column=alphax}",
+        alpha_y = "{sddsanalyzebeam daniel_fort50_8m.sdds -pipe=out | sdds2stream -pipe -column=alphay}",
         filename="%s.twi"
 &end
 !
@@ -193,7 +193,7 @@
 	use_beamline="INJ_BC1_ICM"
         parameters = injector.param,
 	default_order = 1
-	p_central= "{sddsanalyzebeam daniel_fort1.sdds -pipe=out | sdds2stream -pipe -column=pAverage}"
+	p_central= "{sddsanalyzebeam daniel_fort50_8m.sdds -pipe=out | sdds2stream -pipe -column=pAverage}"
 	
 &end
 
@@ -211,10 +211,10 @@
 &twiss_output
         matched=0
   	concat_order = 1,        ! for speed
-        beta_x  = "{sddsanalyzebeam daniel_fort1.sdds -pipe=out | sdds2stream -pipe -column=betax}",
-        beta_y  = "{sddsanalyzebeam daniel_fort1.sdds -pipe=out | sdds2stream -pipe -column=betay}",
-        alpha_x = "{sddsanalyzebeam daniel_fort1.sdds -pipe=out | sdds2stream -pipe -column=alphax}",
-        alpha_y = "{sddsanalyzebeam daniel_fort1.sdds -pipe=out | sdds2stream -pipe -column=alphay}",
+        beta_x  = "{sddsanalyzebeam daniel_fort50_8m.sdds -pipe=out | sdds2stream -pipe -column=betax}",
+        beta_y  = "{sddsanalyzebeam daniel_fort50_8m.sdds -pipe=out | sdds2stream -pipe -column=betay}",
+        alpha_x = "{sddsanalyzebeam daniel_fort50_8m.sdds -pipe=out | sdds2stream -pipe -column=alphax}",
+        alpha_y = "{sddsanalyzebeam daniel_fort50_8m.sdds -pipe=out | sdds2stream -pipe -column=alphay}",
         filename="%s.twi"
 &end
 !
@@ -389,7 +389,7 @@
 	output="cryomodule_end.out",
 	magnets="%s.mag"
 	centroid="%s.cen"
-	p_central= "{sddsanalyzebeam daniel_fort1.sdds -pipe=out | sdds2stream -pipe -column=pAverage}"
+	p_central= "{sddsanalyzebeam daniel_fort50_8m.sdds -pipe=out | sdds2stream -pipe -column=pAverage}"
 &end
 
 &load_parameters
@@ -413,10 +413,10 @@
 &twiss_output
         matched=0
   	concat_order = 1,        ! for speed
-        beta_x  = "{sddsanalyzebeam daniel_fort1.sdds -pipe=out | sdds2stream -pipe -column=betax}",
-        beta_y  = "{sddsanalyzebeam daniel_fort1.sdds -pipe=out | sdds2stream -pipe -column=betay}",
-        alpha_x = "{sddsanalyzebeam daniel_fort1.sdds -pipe=out | sdds2stream -pipe -column=alphax}",
-        alpha_y = "{sddsanalyzebeam daniel_fort1.sdds -pipe=out | sdds2stream -pipe -column=alphay}",
+        beta_x  = "{sddsanalyzebeam daniel_fort50_8m.sdds -pipe=out | sdds2stream -pipe -column=betax}",
+        beta_y  = "{sddsanalyzebeam daniel_fort50_8m.sdds -pipe=out | sdds2stream -pipe -column=betay}",
+        alpha_x = "{sddsanalyzebeam daniel_fort50_8m.sdds -pipe=out | sdds2stream -pipe -column=alphax}",
+        alpha_y = "{sddsanalyzebeam daniel_fort50_8m.sdds -pipe=out | sdds2stream -pipe -column=alphay}",
         filename="injector.twi"
 &end
 
@@ -428,7 +428,7 @@
 
 &sdds_beam
 !	input = "rb2cav-033419.0820.001.sdds"
-	input = "daniel_fort1.sdds"
+	input = "daniel_fort50_8m.sdds"
    	input_type = "elegant"
 	sample_interval = 10
 &end

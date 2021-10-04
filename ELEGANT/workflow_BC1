@@ -1,12 +1,13 @@
 ./clean_directory
-elegant injector_BC1_cryo.ele 
-elegant cryotoFODOend.ele 
-elegant FODOend_todump.ele
-elegant injector_BC1_todump.ele 
-sddsplot -graph=line,vary -col=s,"beta?" injector.twi  
-sddsplot -graph=line,vary -col=s,"beta?" acm.twi  
-sddsplot -col=s,etax eid.twi
-sddsplot -graph=line,vary -col=s,beta?  eid.twi
-sddsplot -graph=line,vary -col=s,beta? injector_BC1_todump.twi  
-~/bin/sddsplottwiss injector_BC1_todump  90 
-sddsplot -graph=line,vary -col=s,"beta?" injector_BC1_todump.twi injector.twi 
+elegant injector_BC1_cryo.ele > injector_BC1_cryo.log 2>&1;
+elegant cryotoFODOend.ele > cryotoFODOend.log 2>&1;
+elegant FODOend_todump.ele > FODOend_todump.log 2>&1;
+elegant track_injectorBC1todump.ele > track_injectorBC1todump.log 2>&1;
+
+#sddsplot -graph=line,vary -col=s,"beta?" injector.twi  
+#sddsplot -graph=line,vary -col=s,"beta?" acm.twi  
+#sddsplot -col=s,etax eid.twi
+#sddsplot -graph=line,vary -col=s,beta?  eid.twi
+#sddsplot -graph=line,vary -col=s,beta? injector_BC1_todump.twi  
+#~/bin/sddsplottwiss injector_BC1_todump  90 
+#sddsplot -graph=line,vary -col=s,"beta?" injector_BC1_todump.twi injector.twi 

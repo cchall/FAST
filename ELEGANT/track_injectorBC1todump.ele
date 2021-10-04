@@ -4,6 +4,10 @@
 !        maximum_length = 0.01
 !&end
 
+&global_settings
+  mpi_io_write_buffer_size = 1048576,
+&end
+
 &run_setup
         lattice = "All_Lines_edited/LINES.lte",
 !	use_beamline="INJ_BC1_ACM"
@@ -16,7 +20,7 @@
 	magnets="%s.mag"
 	centroid="%s.cen"
 	parameters = all.param,
-	p_central= "{sddsanalyzebeam daniel_fort1.sdds -pipe=out | sdds2stream -pipe -column=pAverage}"
+	p_central= "{sddsanalyzebeam daniel_fort50_8m.sdds -pipe=out | sdds2stream -pipe -column=pAverage}"
         default_order = 1
 &end
 
@@ -35,10 +39,10 @@
 
 &twiss_output 
         matched=0
-        beta_x  = "{sddsanalyzebeam daniel_fort1.sdds -pipe=out | sdds2stream -pipe -column=betax}",
-        beta_y  = "{sddsanalyzebeam daniel_fort1.sdds -pipe=out | sdds2stream -pipe -column=betay}",
-        alpha_x = "{sddsanalyzebeam daniel_fort1.sdds -pipe=out | sdds2stream -pipe -column=alphax}",
-        alpha_y = "{sddsanalyzebeam daniel_fort1.sdds -pipe=out | sdds2stream -pipe -column=alphay}",
+        beta_x  = "{sddsanalyzebeam daniel_fort50_8m.sdds -pipe=out | sdds2stream -pipe -column=betax}",
+        beta_y  = "{sddsanalyzebeam daniel_fort50_8m.sdds -pipe=out | sdds2stream -pipe -column=betay}",
+        alpha_x = "{sddsanalyzebeam daniel_fort50_8m.sdds -pipe=out | sdds2stream -pipe -column=alphax}",
+        alpha_y = "{sddsanalyzebeam daniel_fort50_8m.sdds -pipe=out | sdds2stream -pipe -column=alphay}",
         filename ="%s.twi"
 &end
 
@@ -47,9 +51,9 @@
 &end
 
 &sdds_beam
-	input = "daniel_fort1.sdds"
+	input = "daniel_fort50_8m.sdds"
    	input_type = "elegant"
-	sample_interval = 100
+	!sample_interval = 100
 &end
 
 &save_lattice 
