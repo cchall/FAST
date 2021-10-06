@@ -1,0 +1,4 @@
+This directory contains a lattice modified to include CSR and LSC elements in the FAST linac.
+To recreate the lattice run in the ../ELEGANT directory:
+workflow_bc1
+add_lsc.ipynb - modifies injectortodump.lte produced by workflow_BC1 and saves it here

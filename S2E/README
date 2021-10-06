@@ -1,0 +1,5 @@
+Run injector simulation in OPAL with fast_injector_toX107.in
+
+Run remaining linac in elegant with fast_linac.ele
+
+Note: end of OPAL simulation and start of elegant are not currently aligned. a TWISS element is used in the elegant lattice to force a matched transverse distribution.
