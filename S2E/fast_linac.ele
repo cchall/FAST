@@ -1,0 +1,42 @@
+
+&global_settings
+  mpi_io_write_buffer_size = 1048576,
+&end
+
+&run_setup
+  semaphore_file = run_setup.semaphore,
+  lattice = "injectortodump.lte",
+  expand_for = "input_x_106.sdds",
+  use_beamline = "INJ_BC1_EPD",
+  sigma = "%s.sig"
+&end
+
+&run_control
+&end
+
+&twiss_output
+  alpha_x = -0.3165065997845755,
+  alpha_y = -0.3409077393850276,
+  beta_x = 7.689218982798661,
+  beta_y = 7.487138692741433,
+  filename = "%s.twi",
+  matched = 0,
+&end
+
+&matrix_output
+  SDDS_output ="%s.mat",
+  SDDS_output_order = 2,
+  output_at_each_step=1
+&end
+
+&sdds_beam
+  input = "input_x_106.sdds"
+  input_type = "elegant",
+  center_arrival_time = 1,
+  center_transversely = 1,
+  reverse_t_sign = 1  ! Use if OPAL monitor in temporal mode
+&end
+
+
+&track
+&end
