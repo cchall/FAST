@@ -1,0 +1,16 @@
+codes:
+    - opal:
+        setup:
+            input_file: fast_injector_toX107.in
+            execution_type: rsmpi
+            cores: 16
+            output_distribution: fast_injector_toX107.h5
+    - elegant:
+        setup:
+            input_file: fast_linac.ele
+            execution_type: rsmpi
+            cores: 20
+            input_distribution: input_x_106.sdds
+options:
+    software: mesh_scan
+    
