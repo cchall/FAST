@@ -7,7 +7,7 @@
   semaphore_file = run_setup.semaphore,
   lattice = "injectortodump.lte",
   expand_for = "input_x_106.sdds",
-  use_beamline = "INJ_BC1_EPD",
+  use_beamline = "X106_BC1_EPD",
   sigma = "%s.sig"
 &end
 
