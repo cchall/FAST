@@ -1,5 +1,9 @@
-Run injector simulation in OPAL with fast_injector_toX107.in
+- Run injector simulation in OPAL with fast_injector_toX107.in
+- Distribution from X106 monitor can be used to start elegant simulation.
+- Beamline in elegant X106_BC1_EPD starts from the position of the X106 monitor
+- Run remaining linac in elegant with fast_linac.ele
 
-Run remaining linac in elegant with fast_linac.ele
+To use rsopt S2E file:
+- Copy SOLENO4.T7, TESLA_SF7.T7, GUNSF7.T7, fast_laser.dist from ../OPAL to this directory
+- Run in cmd line: rsopt sample start config_s2e.yml
 
-Note: end of OPAL simulation and start of elegant are not currently aligned. a TWISS element is used in the elegant lattice to force a matched transverse distribution.
