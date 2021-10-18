@@ -11,6 +11,37 @@
   sigma = "%s.sig"
 &end
 
+&alter_elements
+    name = "CAV?",
+    item = VOLT,
+    value = 1.0,
+    multiplicative = 1
+&end
+
+!LSC Controls
+&alter_elements
+    type = "LSCDRIFT",
+    name = "*"
+    item = LSC,
+    value = 0
+&end
+
+&alter_elements
+    type = "RFCW",
+    name = "*"
+    item = LSC,
+    value = 0
+&end
+
+&alter_elements
+    type = "CSRDRIFT",
+    name = "*"
+    item = LSC_BINS,
+    value = 0
+&end
+
+!SETUP AND RUN
+
 &run_control
 &end
 

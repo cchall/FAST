@@ -22,7 +22,7 @@ REAL solenoid_strength_parameter = 0.17765710979201543;
 REAL I_Q106 = 0.0;
 REAL I_Q107 = 0.0;
 
-REAL beam_current = 0.13;
+REAL beam_current = 0.13 * 4;
 //----------------------------------------------------------------------------
 // Injector Accelerating Cavities
 //----------------------------------------------------------------------------
@@ -33,7 +33,7 @@ GUN: RFCAVITY, L = 0.265, VOLT = 42.93509225,
     ELEMEDGE = 0.0,
     FMAPFN = "../OPAL/GUN_SF7.T7", 
     LAG = gun_phase * Pi / 180,
-    APVETO = TRUE; 
+    APVETO = FALSE; 
 
 MS:  Solenoid, L = 0, ELEMEDGE = -0.0017, KS = solenoid_strength_parameter,
     FMAPFN = "../OPAL/SOLENO4.T7";
