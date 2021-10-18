@@ -1,0 +1,66 @@
+# Before running, OPAL field maps and distribution need to be copied into this directory from ../OPAL
+codes:
+    - opal:
+        settings:
+            # Shorten tracking to just after X106 monitor
+            track.zstop: "{0.28,8.25}"
+            # Included to make it easier to use covariable setup in preprocess
+            CC1.VOLT: 30.6427935
+            CC2.VOLT: 30.6427935
+        parameters:
+            DISTRIBUTION.1.TPULSEFWHM:
+                min: 0.8e-11
+                max: 2.6e-11
+                start: 1.3333333333333333e-11
+            MS.KS:
+                min: 0.160
+                max: 0.185
+                start: 0.17765710979201543
+                samples: 1
+            GUN.LAG:
+                min: -0.43633231  # -25 deg
+                max: -0.2617993878  # -15 deg
+                start: -0.3490658504  # -20 deg
+                samples: 1
+            CC1.LAG:
+                min: -0.38  
+                max:  -0.22  # -0.0
+                start: -0.30313613 #-0.2094395102  # -12 deg
+                samples: 20
+            # Gang CC1 and CC2
+#             CC2.LAG:
+#                 min: -0.5235987756
+#                 max: -0.0
+#                 start: -0.2094395102
+        setup:
+            preprocess: [functions.py, set_covariables]
+            input_file: fast_injector_toX107.in
+            execution_type: rsmpi
+            cores: 16
+            output_distribution: fast_injector_toX107.h5
+            timeout: 1200.
+    - elegant:
+        settings:
+            alter_elements.1.value: 0.25
+        setup:
+            input_file: fast_linac.ele
+            execution_type: rsmpi
+            cores: 20
+            input_distribution: input_x_106.sdds
+            timeout: 120.
+options:
+    run_dir: /home/vagrant/jupyter/StaffScratch/cchall/fastfelo/FAST/ensemble_pysot_run2
+    nworkers: 10
+    
+#     software: mesh_scan
+#     Optimizer Options
+    software: pysot
+    software_options:
+        num_pts: 81
+    exit_criteria:
+        sim_max: 100000
+
+
+    record_interval: 5
+    objective_function: [functions.py, obj_function]
+    
