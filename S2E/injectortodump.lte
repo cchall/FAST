@@ -157,7 +157,7 @@
 "D_Q513_V513": LSCDRIFT,l=0.23262
 "D_Q601_X602": CSRDRIFT,dz=0.01,l=0.150617,lsc_bins=1024,use_stupakov=1
 "D_Q602_H602": CSRDRIFT,dz=0.01,l=0.341687,lsc_bins=1024,use_stupakov=1
-"D_Q603_B603": CSRDRIFT,dz=0.01,l=0.658446,lsc_bins=1024,use_stupakov=1_t
+"D_Q603_B603": CSRDRIFT,dz=0.01,l=0.658446,lsc_bins=1024,use_stupakov=1
 "D_Q604_Q605": LSCDRIFT,bins=1024,l=0.138
 "D_Q605_V605": LSCDRIFT,bins=1024,l=0.23262
 "D_Q609_Q610": LSCDRIFT,bins=1024,l=0.138
